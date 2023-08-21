@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/apng" href="/icon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenny Ho</title>
+  </head>
+  <body>
+		
+    <div id="app">
+			<div class="header">
+				<label class="switch">
+					<input type="checkbox" checked>
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<div class="absolute">
+				<h1>Hi</h1>
+				<h1>My name is Jenny</h1>
+				<div id="magic"></div>
+			</div>
+		</div>
+    <script type="module" src="/main.js"></script>
+		<script type="x-shader/x-vertex" id="vertexshader">
+
+			attribute float size;
+			attribute vec3 customColor;
+			varying vec3 vColor;
+		
+			void main() {
+		
+				vColor = customColor;
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+				gl_PointSize = size * ( 300.0 / -mvPosition.z );
+				gl_Position = projectionMatrix * mvPosition;
+		
+			}
+		
+		</script>
+		<script type="x-shader/x-fragment" id="fragmentshader">
+		
+		 uniform vec3 color;
+		 uniform sampler2D pointTexture;
+		
+		 varying vec3 vColor;
+		
+		 void main() {
+		
+			 gl_FragColor = vec4( color * vColor, 1.0 );
+			 gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+		
+		 }
+		</script>
+
+
+  </body>
+</html>
