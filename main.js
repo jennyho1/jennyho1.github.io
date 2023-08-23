@@ -6,13 +6,18 @@ import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 const raycaster = new THREE.Raycaster()
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, innerWidth / innerHeight, 0.1, 1000 );
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({alpha: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
 
 document.body.appendChild( renderer.domElement );
+camera.position.z = 50
 
+// light
+const light1 = new THREE.DirectionalLight(0xffffff, 1)
+light1.position.set(0, 1, 1)
+scene.add(light1)
 
-const planeGeometry = new THREE.PlaneGeometry(400, 400, 50, 50)
+const planeGeometry = new THREE.PlaneGeometry(400, 400, 60, 60)
 const planeMaterial = new THREE.MeshPhongMaterial({
 	side: THREE.DoubleSide,
 	flatShading: true,
@@ -42,16 +47,13 @@ planeMesh.geometry.attributes.position.originalPosition = planeMesh.geometry.att
 // color attribute addition
 const colors = []
 for (let i = 0; i<planeMesh.geometry.attributes.position.count; i++){
-	colors.push(0, 0.01, 0.12)
+	colors.push(1, 1, 1)
 }
 planeMesh.geometry.setAttribute('color', new THREE.BufferAttribute(new Float32Array(colors), 3))
 scene.add(planeMesh)
 
-// light
-const light1 = new THREE.DirectionalLight(0xffffff, 1)
-light1.position.set(0, 1, 1)
-scene.add(light1)
-camera.position.z = 50
+
+
 
 const mouse = {
 	x: undefined,
@@ -77,9 +79,6 @@ function animate() {
 	const intersects = raycaster.intersectObject(planeMesh)
 	if (intersects.length > 0) {
 		const {color, position} = intersects[0].object.geometry.attributes
-		if (frame < 0.1){
-			console.log(intersects[0])
-		}
 
 		color.setX(intersects[0].face.a, 0.1)
 		color.setX(intersects[0].face.b, 0.1)
@@ -97,8 +96,8 @@ function animate() {
 
 		intersects[0].object.geometry.attributes.color.needsUpdate = true
 
-		const initialColor = {r: 0, g: .01, b: .12}
-		const hoverColor = {r: 0, g: .026, b: 0.26}
+		const initialColor = {r: 1, g: 1, b: 1}
+		const hoverColor = {r: .5, g: .5, b: 0.5}
 		gsap.to(hoverColor, {
 			r: initialColor.r,
 			g: initialColor.g,
@@ -123,48 +122,33 @@ function animate() {
 }
 
 //-------------------------------------------------------------------------------------------------------------------------
-// const x = 0, y = 0;
 
-// const heartShape = new THREE.Shape();
+// Create a sine-like wave
+const curve = new THREE.SplineCurve( [
+	new THREE.Vector2( -10, 0 ),
+	new THREE.Vector2( -5, 5 ),
+	new THREE.Vector2( 0, 0 ),
+	new THREE.Vector2( 5, -5 ),
+	new THREE.Vector2( 10, 0 )
+] );
 
-// heartShape.moveTo( x + 5, y + 5 );
-// heartShape.bezierCurveTo( x + 5, y + 5, x + 4, y, x, y );
-// heartShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
-// heartShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
-// heartShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
-// heartShape.bezierCurveTo( x + 16, y + 7, x + 16, y, x + 10, y );
-// heartShape.bezierCurveTo( x + 7, y, x + 5, y + 5, x + 5, y + 5 );
+const points = curve.getPoints( 50 );
+const geometry = new THREE.BufferGeometry().setFromPoints( points );
 
-// const geometry = new THREE.ShapeGeometry( heartShape );
-// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-// const mesh = new THREE.Mesh( geometry, material ) ;
+const material = new THREE.LineBasicMaterial( { color: 0xff0000 } );
 
-// scene.add( mesh );
-
-// mesh.position.set(0, 0, 4);
-
-
-const loader = new FontLoader();
-loader.load(
-	'node_modules/three/examples/fonts/droid/droid_serif_regular.typeface.json',
-	(droidFont) => {
-		const geometry = new TextGeometry( 'Hello', {
-			font: droidFont,
-			size: 10,
-			height: 2
-		} );
-		const material = new THREE.MeshNormalMaterial;
-		const mesh = new THREE.Mesh( geometry, material ) ;
-		mesh.position.x = -36
-		mesh.position.y = 5
-		mesh.position.z = 10
-		scene.add( mesh );
-	}
-)
+// Create the final object to add to the scene
+const splineObject = new THREE.Line( geometry, material );
+scene.add(splineObject)
 
 
 
 animate()
+
+addEventListener('mousemove', (event) => {
+	mouse.x = (event.clientX / innerWidth) * 2 - 1
+	mouse.y = -(event.clientY / innerHeight) * 2 + 1
+})
 
 addEventListener('mousemove', (event) => {
 	mouse.x = (event.clientX / innerWidth) * 2 - 1
