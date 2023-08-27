@@ -12,6 +12,8 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
+    "baffle": "^0.3.6",
     "bootstrap": "^5.3.1",
     "dat.gui": "^0.7.9",
     "gsap": "^3.12.2",

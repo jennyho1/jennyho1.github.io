@@ -35,7 +35,7 @@
 	left: -8px;
 }
 
-i {
+.icon {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -43,6 +43,8 @@ i {
 	transform: translate(-50%, -50%);
 	font-size: 25px;
 	z-index: 10;
+	color: white;
+	text-decoration: none;
 	color: white;
 }
 
