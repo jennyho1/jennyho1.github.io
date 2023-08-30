@@ -5,7 +5,7 @@ anime({
 	targets: "#headline path",
 	strokeDashoffset: [anime.setDashoffset, 0],
 	easing: "easeInOutSine",
-	duration: 4000,
+	duration: 2500,
 	delay: function (el, i) {
 		return i*5
 	},
