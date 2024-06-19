@@ -15,18 +15,18 @@
   -webkit-text-size-adjust: 100%; 
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+/* fonts  */
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 body {
   margin: 0;
@@ -36,22 +36,8 @@ body {
 	font-family: 'Rubik', sans-serif;
 }
 
-
-.homepagev2 {
-	height: 100vh;
-	min-height: 375px;
-	background-color: #131313;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-
-
-
 a {
 	text-decoration: none;
-	color: white;
 }
 
 /* .projects {

@@ -2,8 +2,7 @@
 #navbar {
 	height: 60px;
 	width: 100%;
-	background-color: #333;
-	color: white;
+	background-color: #62626268;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -14,7 +13,62 @@
 	left: 0;
 	transition: top 0.3s;
 	z-index: 1000;
+	backdrop-filter: blur(8px);
+
+	border-bottom: 4px solid;
+  border-image-slice: 1;
+	border-image-source: linear-gradient(to left, #1f32ff, #23fbff);
 }
+
+body.dark .nav-links a{
+	color: white;
+}
+body.light .nav-links a{
+	color: black;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+
+	font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nav-links a {
+	transition: color 1s, background-color .3s;
+	position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  background-color: rgb(19, 75, 69);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+body.dark .nav-links a::before{
+	background-color: rgb(19, 75, 69);
+}
+body.light .nav-links a::before{
+	background-color: rgb(248, 248, 168);
+}
+
+
+
+
 
 .switch-background {
   background-color: rgb(23, 29, 50);
