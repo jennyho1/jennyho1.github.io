@@ -1,0 +1,86 @@
+.homepage {
+	height: 100vh;
+	min-height: 375px;
+	background-color: #b5bbff;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.desk-area {
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.homepage #desk {
+	width: 100%;
+	max-width: 1100px;
+	min-width: 320px;
+	height:auto;
+} 
+
+.desk-area .desk-overlay {
+	position: absolute;
+  top: 30%;
+  left: 50%;
+	text-align: center;
+  color: black;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+	font-size: max(min(3vw, 32px), 10px);
+}
+
+
+
+/* --------------------------Typewriter effect--------------------------*/
+
+.typewriter p {
+  overflow: hidden;
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap;
+  margin: 0 auto; 
+
+	&:nth-child(1) {
+		animation: 
+			typing 1.2s steps(25, end),
+			blink-caret .75s step-end infinite,
+			hide-caret 0s linear 1.3s forwards;
+	}
+	&:nth-child(2) {
+		visibility: hidden;
+		animation: 
+			typing 1.2s steps(40, end) 1.2s forwards,
+			blink-caret .75s step-end infinite,
+			hide-caret 0s linear 2.5s forwards;
+	}
+	&:nth-child(3) {
+		visibility: hidden;
+		animation: 
+			typing 1.2s steps(40, end) 2.4s forwards,
+			blink-caret .75s step-end infinite;
+	}
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; visibility: visible; }
+  to { width: 100%; visibility: visible; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Keyframe to hide the cursor */
+@keyframes hide-caret {
+  from { border-color: orange; }
+  to { border-color: transparent; }
+}

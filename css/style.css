@@ -2,7 +2,7 @@
   font-family: 'Rubik', sans-serif;
   line-height: 1.5;
 
-	background-color: #242424;
+	background-color: #b5bbff;
 	/* color-scheme: light dark; */
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -31,7 +31,7 @@
 body {
   margin: 0;
 	min-width: 320px;
-	background-color: #242424;
+	background-color: #b5bbff;
 	color: white;
 	font-family: 'Rubik', sans-serif;
 }
@@ -48,7 +48,7 @@ header {
 	align-items: center;
 }
 
-.homepage {
+.homepagev2 {
 	height: 100vh;
 	min-height: 375px;
 	background-color: #131313;
@@ -57,6 +57,8 @@ header {
 	align-items: center;
 	position: relative;
 }
+
+
 
 a {
 	text-decoration: none;
@@ -73,14 +75,14 @@ a {
 	
 }
 
-.project-list {
+/* .project-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-gap: 40px;
 	margin-top: 50px;
-}
+} */
 
-.project {
+/* .project {
 	border-radius: 16px;
 	position: relative;
 	overflow: hidden;
@@ -92,15 +94,15 @@ a {
 	display: block;
 	transition: transform 0.5s;
 
-}
+} */
 
-.project:hover img{
+/* .project:hover img{
 	transform: scale(1.2);
 }
 
 .project:hover .layer{
 	height: 100%;
-}
+} */
 
 .layer {
 	width: 100%;
@@ -146,12 +148,12 @@ a {
 }
 
 
-.bee {
+/* .bee {
 	height: 126px;
 	position: absolute;
 	top: 0;
 	left: 40%;
-}
+} */
 
 
 .contact {
@@ -167,7 +169,7 @@ footer {
 
 
 
-
+/* 
 
 .gs_reveal {
   opacity: 0;
@@ -187,5 +189,4 @@ footer {
 .card img {
 	border-radius: 14px;
 }
-
-
+ */
