@@ -1,23 +1,30 @@
 .homepage {
 	height: 100vh;
 	min-height: 375px;
-	background-color: #b5bbff;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	position: relative;
 	padding-top: 80px;
 }
 
 .homepage h1 {
-	color: black;
 	font-size: 4.4em;
 	text-align: center;
-	translate: 0 -250px
+	translate: 0 -250px;
+	flex-grow: 2;
 }
 
 /* --------------------------Desk Area--------------------------*/
+
+body.light .desk-area .dark {
+	display:none;
+}
+
+body.dark .desk-area .light {
+	display:none;
+}
 
 .desk-area {
 	width: 100%;
@@ -25,16 +32,16 @@
 	position: relative;
 }
 
-.homepage #desk {
+.homepage .desk {
 	width: 100%;
-	max-width: 1100px;
+	max-width: 1000px;
 	min-width: 320px;
 	height:auto;
 } 
 
 .desk-area .desk-overlay {
 	position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
 	text-align: center;
   color: black;
@@ -42,7 +49,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-	font-size: max(min(3vw, 32px), 10px);
+	font-size: max(min(3vw, 30px), 10px);
 }
 
 /* --------------------------Typewriter effect--------------------------*/
@@ -54,22 +61,23 @@
   margin: 0 auto; 
 
 	&:nth-child(1) {
+		visibility: hidden;
 		animation: 
-			typing 1.2s steps(25, end),
+			typing 1.2s steps(25, end) 0.2s forwards,
 			blink-caret .75s step-end infinite,
-			hide-caret 0s linear 1.3s forwards;
+			hide-caret 0s linear 1.5s forwards;
 	}
 	&:nth-child(2) {
 		visibility: hidden;
 		animation: 
-			typing 1.2s steps(40, end) 1.2s forwards,
+			typing 1.2s steps(40, end) 1.4s forwards,
 			blink-caret .75s step-end infinite,
-			hide-caret 0s linear 2.5s forwards;
+			hide-caret 0s linear 2.7s forwards;
 	}
 	&:nth-child(3) {
 		visibility: hidden;
 		animation: 
-			typing 1.2s steps(40, end) 2.4s forwards,
+			typing 1.2s steps(40, end) 2.6s forwards,
 			blink-caret .75s step-end infinite;
 	}
 }

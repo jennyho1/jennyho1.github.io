@@ -2,17 +2,17 @@
   font-family: 'Rubik', sans-serif;
   line-height: 1.5;
 
-	background-color: #b5bbff;
+
 	/* color-scheme: light dark; */
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%; */
+  -webkit-text-size-adjust: 100%; 
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -31,22 +31,11 @@
 body {
   margin: 0;
 	min-width: 320px;
-	background-color: #b5bbff;
+	background-color: rgb(23, 29, 50);
 	color: white;
 	font-family: 'Rubik', sans-serif;
 }
 
-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	height: 60px;
-	width: 100%;
-	display: flex;
-	justify-content: end;
-	align-items: center;
-}
 
 .homepagev2 {
 	height: 100vh;
@@ -147,15 +136,6 @@ a {
 	text-align: center;
 }
 
-
-/* .bee {
-	height: 126px;
-	position: absolute;
-	top: 0;
-	left: 40%;
-} */
-
-
 .contact {
 	text-align: center;
 	margin-top: 300px;
@@ -169,7 +149,7 @@ footer {
 
 
 
-/* 
+
 
 .gs_reveal {
   opacity: 0;
@@ -189,4 +169,4 @@ footer {
 .card img {
 	border-radius: 14px;
 }
- */
+

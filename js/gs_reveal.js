@@ -1,44 +1,6 @@
 import gsap from "gsap"
-import anime from 'animejs';
 
-// import { MotionPathPlugin } from "gsap/all"
-
-
-// gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
-
-// const flightPath = {
-// 	path: [
-// 		{x:100, y:20},
-// 		{x:150, y:100},
-
-// 	],
-// 	autoRotate: true,
-// }
-
-
-// gsap.to("#bee", {
-//   duration: 2, 
-//   ease: "power1.inOut",
-//   motionPath: flightPath,
-// 	scrollTrigger: {
-// 		trigger: "#bee",
-// 		toggleActions: "restart none restart pause",
-// 		markers: true,
-// 		start: "100px bottom",
-// 	}
-// })
-// const path = anime.path('#path');
-
-// anime({
-//   targets: '#beee',
-//   translateX: path('x'),
-//   translateY: path('y'),
-//   rotate: path('angle'),
-//   loop: true,
-//   duration: 26000,
-//   easing: 'linear'
-// });
 
 function animateFrom(elem, direction) {
   direction = direction || 1;
