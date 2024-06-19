@@ -3,12 +3,21 @@
 	min-height: 375px;
 	background-color: #b5bbff;
 	display: flex;
-	flex-direction: row;
-	flex-flow: row wrap;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
 	align-items: center;
 	position: relative;
+	padding-top: 80px;
 }
+
+.homepage h1 {
+	color: black;
+	font-size: 4.4em;
+	text-align: center;
+	translate: 0 -250px
+}
+
+/* --------------------------Desk Area--------------------------*/
 
 .desk-area {
 	width: 100%;
@@ -35,8 +44,6 @@
   text-align: center;
 	font-size: max(min(3vw, 32px), 10px);
 }
-
-
 
 /* --------------------------Typewriter effect--------------------------*/
 

@@ -1,19 +1,8 @@
 import anime from 'animejs';
-import gsap from 'gsap';
-
 
 anime({
-	targets: "#headline path",
-	strokeDashoffset: [anime.setDashoffset, 0],
-	easing: "easeInOutSine",
-	duration: 2500,
-	delay: function (el, i) {
-		return i*5
-	},
-	direction: "alternate",
+  targets: ".homepage h1",
+	translateY: 250,
+  easing: 'spring(1, 80, 10, 0)',
 	loop: false
-})
-
-
-gsap.registerPlugin(ScrollToPlugin);
-
+});
