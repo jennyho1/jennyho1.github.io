@@ -24,12 +24,12 @@
   <body class="dark">
 
     <nav id="navbar">
-			<div class="logo"><img src="favicon-32x32.png" alt="logo"></div>
+			<div class="logo"><a href="#home"><img src="favicon-32x32.png" alt="logo"></a></div>
 			<div class="nav-links">
-				<a href="#about">About</a>
-				<a href="#projects">Projects</a>
-				<a href="#keyboards">Keyboards</a>
-				<div class="switch-background off-shadow">
+				<div><a href="#about">About</a></div>
+				<div><a href="#projects">Projects</a></div>
+				<div><a href="#keyboards">Keyboards</a></div>
+				<div class="switch-background">
 					<div class="innerSwitch">
 						<svg width="285" height="24" viewBox="0 0 208 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="face">
 							<path class="mouth" d="M77 30H130V30.3375C130 30.7034 118.136 31 103.5 31C88.8645 31 77 30.7034 77 30.3375V30Z" fill="#E76060" />
@@ -39,10 +39,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="hamburger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
 		</nav>
-
+		<div class="nav-overlay"></div>
     <div id="app">
-			<section class="homepage">
+			<section class="homepage" id="home">
 				<div>
 					<h1>Hi👋, I'm Jenny</h1>
 				</div>
@@ -58,7 +63,7 @@
 			</section>
 
 
-			<div class="about-me section container">
+			<div class="about-me section container" id="about">
 
 
 				<div class="row">
@@ -118,7 +123,7 @@
 				</div>
 			</div> -->
 
-			<div class="projects section container" >
+			<div class="projects section container" id="projects">
 
 				<div class="project-grid">
 					<div class="grid-item draggable">

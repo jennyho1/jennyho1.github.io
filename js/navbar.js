@@ -1,5 +1,57 @@
 import anime from 'animejs';
 
+// Responsive nav bar
+
+var navOpen = false;
+
+function toggleNav(navOpen){
+	const navLinks = document.querySelector(".nav-links");
+	const links = document.querySelectorAll(".nav-links div");
+	navLinks.classList.toggle("open");
+	overlay.classList.toggle("open");
+	links.forEach(link => {
+			link.classList.toggle("link-fade");
+	});
+	hamburger.classList.toggle("toggle");
+	return !navOpen;
+}
+
+const hamburger = document.querySelector(".hamburger");
+const overlay = document.querySelector(".nav-overlay");
+const links = document.querySelectorAll(".nav-links div a");
+const logo = document.querySelector(".logo a");
+
+hamburger.addEventListener('click', ()=>{
+	navOpen = toggleNav(navOpen);
+});
+overlay.addEventListener('click', ()=>{
+	navOpen = toggleNav(navOpen);
+});
+links.forEach(link => {
+	link.addEventListener('click', ()=>{
+		if (navOpen){
+			navOpen = toggleNav(navOpen);
+		}
+	});
+});
+
+
+// animate logo
+var logoAnimation = anime({
+	targets: '.logo a img',
+	rotate: '1turn',
+	autoplay: false,
+});
+
+logo.addEventListener('click', ()=>{
+	if (navOpen){
+		navOpen = toggleNav(navOpen);
+	}
+	logoAnimation.play();
+});
+
+
+
 // Hide nav when user scrolls down.
 // Show nav when user scrolls up or when cursor is at the top.
 
@@ -8,16 +60,15 @@ const navbar = document.getElementById('navbar');
 const navbarHeight = 60;
 
 window.addEventListener('scroll', () => {
-	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	
-	if (scrollTop > lastScrollTop) {
-		// Scroll down
-		navbar.style.top = `-${navbarHeight}px`;
-	} else {
-		// Scroll up
+	let scrollTop = document.documentElement.scrollTop;
+
+	if (window.scrollY <= 0 || navOpen == true || scrollTop <= lastScrollTop) {
+		// show nav bar
 		navbar.style.top = '0';
-	}
-	
+	} else {
+		// scrolling down so hide nav bar
+		navbar.style.top = `-${navbarHeight}px`;
+	} 
 	lastScrollTop = scrollTop;
 });
 
@@ -47,6 +98,7 @@ const mouthClosed =
 const face = document.querySelector(".innerSwitch");
 const switchBG = document.querySelector(".switch-background");
 const body = document.querySelector("body");
+const navOverlay = document.querySelector(".nav-overlay");
 let switched = false;
 
 face.addEventListener("click", () => {
@@ -65,7 +117,7 @@ face.addEventListener("click", () => {
   ).add(
 		{
 			targets: [switchBG, body],
-			backgroundColor: switched ? "rgb(23, 29, 50)" : "rgb(176, 183, 209)",
+			backgroundColor: switched ? "rgb(23, 29, 50)" : "rgb(193, 204, 244)",
 			color: switched ? "rgb(255,255,255)" : "rgb(0,0,0)",
 		},
 		50
