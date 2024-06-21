@@ -13,6 +13,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; 
+
+
+  --color-bg1: rgb(43, 43, 68);
+  --color-bg2: rgb(0, 17, 82);
+	/* --color-bg2: rgb(86, 94, 190); */
+  --color1: 86, 94, 190;
+  --color2: 18, 67, 64;
+  --color3: 29, 37, 117;
+  --color4: 56, 37, 79;
+  --color5: 33, 4, 86;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+
+
 }
 
 /* fonts  */
@@ -43,36 +58,31 @@ a {
 
 .section-title {
 	background: rgb(5,211,255);
-	background: linear-gradient(155deg, rgba(5,211,255,1) 0%, rgba(24,114,255,1) 47%, rgba(0,18,255,1) 100%);
+	background: linear-gradient(155deg, rgba(5,211,255,1) 0%, rgb(37, 119, 252) 47%, rgba(0,18,255,1) 100%);
 	width: 100%;
 	display: flex;
+	flex-flow: row nowrap;
 	justify-content: center;
-	align-items: center;
 	margin-bottom: 40px;
-}
-.section-title h1{
+} 
 
+.section-title h1{
+	padding: 12px 20px;
+	margin: 0;
+	border: 4px solid;
+  border-image-slice: 1;
+	border-image-source: linear-gradient(to right, #1f32ff, #23deff);
 }
 
 .section-title div {
 	background-color: rgb(23, 29, 50);
-  padding: 20px;
-	margin: 60px auto;
-  text-align: center;
-	
+  padding: 10px;
+	margin: 60px 10px;
 }
 
-
-
-.about-me {
-	position: relative;
-	padding-top: 160px;
-	padding-bottom: 160px;
-}
 .center {
 	text-align: center;
 }
-
 
 
 /* .gs_reveal {
@@ -144,3 +154,32 @@ footer {
 .attract i{
 	color: white;
 }
+
+
+/* ----------------- Background gradient ----------------- */
+.gradient-bg {
+	background: linear-gradient(47deg, #181a3a, #333a4b, #0a2c72);
+	background-size: 600% 600%;
+
+	-webkit-animation: gradient 14s ease infinite;
+	-moz-animation: gradient 14s ease infinite;
+	animation: gradient 14s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0%{background-position:87% 0%}
+	50%{background-position:14% 100%}
+	100%{background-position:87% 0%}
+}
+@-moz-keyframes gradient {
+	0%{background-position:87% 0%}
+	50%{background-position:14% 100%}
+	100%{background-position:87% 0%}
+}
+@keyframes gradient {
+	0%{background-position:87% 0%}
+	50%{background-position:14% 100%}
+	100%{background-position:87% 0%}
+}
+
+

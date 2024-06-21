@@ -50,6 +50,12 @@
 }
 .project-wrapper .description {
 	color: rgb(218, 241, 255);
+	a {
+		color: rgb(205, 255, 200);
+	}
+	a:hover {
+		color: rgb(32, 255, 11);
+	}
 }
 
 .chains {

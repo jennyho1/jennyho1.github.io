@@ -17,17 +17,19 @@
 		<link rel="stylesheet" href="css/projects.css">
 		<link rel="stylesheet" href="css/homepage.css">
 		<link rel="stylesheet" href="css/navbar.css">
+		<link rel="stylesheet" href="css/aboutme.css">
+		<link rel="stylesheet" href="css/block_reveal.css">
 
     <title>Jenny Ho</title>
   </head>
   <body class="dark">
-
+		
     <nav id="navbar">
 			<div class="logo"><a href="#home"><img src="logo.svg" alt="logo"></a></div>
 			<div class="nav-links">
 				<div><a href="#about">About</a></div>
 				<div><a href="#projects">Projects</a></div>
-				<div><a href="#keyboards">Keyboards</a></div>
+				<!-- <div><a href="#keyboards">Keyboards</a></div> -->
 				<div class="switch-background">
 					<div class="innerSwitch">
 						<svg width="285" height="24" viewBox="0 0 208 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="face">
@@ -62,34 +64,49 @@
 			</section>
 
 
-			<div class="about-me container" id="about">
-				<div class="row">
-					<div class="col center gs_reveal">
-						<img src="me.jpg" alt="" width="256" id="me">
+			<section class="about-me gradient-bg" id="about">
+				<div class="left-side orange-gradient"></div>
+				<div class="container">
+					<div class="row" style="gap: 30px;">
+						<div class="col center gs_reveal">
+							<div class="my-picture">
+								<img src="me.jpg" alt="" width="256" id="me">
+								<img src="pin.svg" alt="" id="pin">
+							</div>
+						</div>
+						<div class="col">
+							<div>
+								<div class="block-reveal tv1">
+									<span class="block-reveal__block"></span>
+									<h1 class="block-reveal__text">About Me</h1>  
+								</div>
+							</div>
+							<div class="about-me-text">
+								<p class="gs_reveal">Welcome to my corner of the internet! I'm Jenny, your friendly 
+									neighborhood software developer with an interest in game, web, and app development. 
+									I recently graduated from the University of Toronto with a degree in Computer Science.</p>
+								<p class="gs_reveal">I've always had a passion for creating things and solving puzzles 
+									– basically, I was that kid who loved playing with lego and now I just play with 
+									more expensive building blocks (code). When I'm not busy coding, you can find me 
+									obsessing over my collection of overpriced, heavy, but pretty keyboards.</p>
+								<p class="gs_reveal">In my downtime, I enjoy traveling to new places, skateboarding, and 
+									doing escape rooms. I like to think of life as one big puzzle – and I’m always ready 
+									for the next adventure. </p>
+									<p class="gs_reveal">So, whether you're here to see my latest project, collaborate, or 
+										just to say hi, welcome! Let's build something amazing together.</p>
+							</div>
+						</div>
 					</div>
-					<div class="col">
-						<h1 class="gs_reveal">About Me</h1>
-						<p class="gs_reveal">Welcome to my corner of the internet! I'm Jenny, your friendly 
-							neighborhood software developer with an interest in game, web, and app development. 
-							I recently graduated from the University of Toronto with a degree in Computer Science.</p>
-						<p class="gs_reveal">I've always had a passion for creating things and solving puzzles 
-							– basically, I was that kid who loved playing with lego and now I just play with 
-							more expensive building blocks (code). When I'm not busy coding, you can find me 
-							obsessing over my collection of overpriced, heavy, but pretty keyboards.</p>
-						<p class="gs_reveal">In my downtime, I enjoy traveling to new places, skateboarding, and 
-							doing escape rooms. I like to think of life as one big puzzle – and I’m always ready 
-							for the next adventure. </p>
-							<p class="gs_reveal">So, whether you're here to see my latest project, collaborate, or 
-								just to say hi, welcome! Let's build something amazing together.</p>
-					</div>
-				</div>	
-			</div>
+				</div>
+			</section>
 
 
 			<section class="section-title" id="projects">
-				<div>
-					<h1>- Projects - </h1>
+				<img class="gear1 gs_reveal" src="gear.svg" alt="gear" width="80px">
+				<div class="gs_reveal">
+					<h1>Projects</h1>
 				</div>
+				<img class="gear2 gs_reveal" src="gear.svg" alt="gear" width="80px">
 			</section>
 			
 			<section class="projects container">
@@ -154,7 +171,9 @@
 								<div class="title"><b>My Website</b></div> <hr>
 								<div class="description">
 									This is the second iteration of my website. It is made with the help 
-									of Vite, anime.js, gsap, draggability, and bootstrap. It is also made 
+									of <a href="https://vitejs.dev/">Vite</a>, <a href="https://animejs.com/">anime.js</a>, 
+									<a href="https://gsap.com/">gsap</a>, <a href="https://draggabilly.desandro.com/">draggability</a>, 
+									and <a href="https://getbootstrap.com/">bootstrap</a>. It is also made 
 									with the help of my skills and creativity :wink:
 								</div>
 								<div class="project-footer">
@@ -189,8 +208,10 @@
 								<div class="title"><b>Wordle</b></div> <hr>
 								<div class="description">
 									Experience the Wordle game reinvented for multiplayer action. 
-									Built with WebSockets for real-time player synchronization, 
-									Express for backend RESTful APIs, and React for frontend.
+									Built with <a href="https://www.npmjs.com/package/ws">WebSockets</a> 
+									for real-time player synchronization, 
+									<a href="https://expressjs.com/">Express</a> for backend RESTful APIs, 
+									and <a href="https://react.dev/">React</a> for frontend.
 								</div>
 								<div class="project-footer">
 									<div class="tags">
@@ -224,7 +245,8 @@
 									Ascend through the galaxy, overcoming challenges and hostile aliens 
 									who may drop helpful items. Manage limited resources wisely to ensure 
 									survival in the vastness of space. Created for the Ubisoft Toronto 
-									"<em>Develop at Ubisoft 2024 programming challenge</em>".
+									"<em><a href="https://toronto.ubisoft.com/develop-at-ubisoft/">Develop at Ubisoft</a> 
+										2024 programming challenge</em>".
 								</div>
 								<div class="project-footer">
 									<div class="tags">
@@ -291,8 +313,8 @@
 									also recommends ideal outdoor activities based on current 
 									conditions. It predicts beautiful sunsets and suggests 
 									optimal fishing times by analyzing data from the 
-									OpenWeatherMap API, including rain forecasts, cloud cover, 
-									humidity, and more.
+									<a href="https://openweathermap.org/api">OpenWeatherMap API</a>, 
+									including rain forecasts, cloud cover, humidity, and more.
 								</div>
 								<div class="project-footer">
 									<div class="tags">
@@ -311,6 +333,8 @@
 				</div>
 				
 			</section>
+
+
 
 				<!-- <div class="project-grid">
 					<div class="grid-item draggable">

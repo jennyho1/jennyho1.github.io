@@ -1,5 +1,14 @@
 import Draggabilly from "draggabilly"
 
+
+
+
+
+
+
+
+
+
 // initialize the draggabilities
 var draggableElems = document.querySelectorAll('.draggable');
 var draggies = []

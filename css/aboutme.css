@@ -1,0 +1,42 @@
+.about-me {
+	position: relative;
+	padding: 160px 0;
+}
+
+.about-me-text {
+	background-color: #091C32;
+	padding: 30px;
+	box-shadow: 0px 0px 15px rgb(0, 0, 0);
+	z-index: 999;
+	position: relative;
+}
+
+.my-picture {
+	position: relative;
+}
+#pin {
+	position: absolute;
+	top: -20px;
+	left: 45%;
+	width: 50px;
+}
+#me {
+	box-shadow: 0px 0px 15px rgb(0, 0, 0);
+	width: 100%;
+	min-width: 280px;
+	max-width: 400px;
+}
+
+.left-side {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	z-index: 0;
+}
+.orange-gradient {
+	background: rgb(148,84,0);
+	background: linear-gradient(0deg, rgba(148,84,0,1) 0%, rgba(149,117,0,1) 100%);
+}
+
