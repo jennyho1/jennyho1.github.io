@@ -98,7 +98,6 @@ const mouthClosed =
 const face = document.querySelector(".innerSwitch");
 const switchBG = document.querySelector(".switch-background");
 const body = document.querySelector("body");
-const navOverlay = document.querySelector(".nav-overlay");
 let switched = false;
 
 face.addEventListener("click", () => {
