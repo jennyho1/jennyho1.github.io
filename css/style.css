@@ -31,7 +31,7 @@
 body {
   margin: 0;
 	min-width: 320px;
-	background-color: rgb(23, 29, 50);
+	background-color: #171d32;
 	color: white;
 	font-family: 'Rubik', sans-serif;
 }
@@ -44,13 +44,21 @@ a {
 .section-title {
 	background: rgb(5,211,255);
 	background: linear-gradient(155deg, rgba(5,211,255,1) 0%, rgba(24,114,255,1) 47%, rgba(0,18,255,1) 100%);
-	padding: 100px 50px;
-	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 40px;
 }
 .section-title h1{
-	background: rgb(0, 0, 0);
-	display: inline;
-	padding: 30px;
+
+}
+
+.section-title div {
+	background-color: rgb(23, 29, 50);
+  padding: 20px;
+	margin: 60px auto;
+  text-align: center;
 	
 }
 
@@ -65,20 +73,74 @@ a {
 	text-align: center;
 }
 
-.contact {
-	text-align: center;
-	margin-top: 300px;
-	margin-bottom: 100px;
-}
-
-footer {
-	text-align: center;
-}
 
 
-.gs_reveal {
+/* .gs_reveal {
   opacity: 0;
   visibility: hidden;
   will-change: transform, opacity;
+} */
+
+/* ----------------- Footer section ----------------- */
+
+.back-to-top {
+	display: flex;
+	justify-content: right;
+	margin: 40px;
 }
 
+.back-to-top a i{
+	background-color: black;
+	color: white;
+	font-size: 1.3em;
+	border-radius: 100%;
+	padding: 10px 13px;
+	animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+	0%, 100% {
+			transform: translateY(0);
+	}
+	50% {
+			transform: translateY(-5px);
+	}
+}
+
+footer {
+  display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	height: 250px;
+	background-color: #011b45;
+	background-image: url('/footer-dark.svg');
+	padding-top: 20px;
+}
+
+/* ----------------- Footer icons ----------------- */
+.button-group {
+	display: flex;
+	justify-content: center;
+}
+
+.attract-container {
+	padding: 30px;
+	position: relative;
+}
+
+.attract {
+	background-color: rgb(0, 0, 0);
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	transition: transform 0.1s;
+	position: relative;
+	z-index: 1;
+}
+.attract i{
+	color: white;
+}
