@@ -17,16 +17,9 @@
 
   --color-bg1: rgb(43, 43, 68);
   --color-bg2: rgb(0, 17, 82);
-	/* --color-bg2: rgb(86, 94, 190); */
   --color1: 86, 94, 190;
-  --color2: 18, 67, 64;
-  --color3: 29, 37, 117;
-  --color4: 56, 37, 79;
-  --color5: 33, 4, 86;
   --color-interactive: 140, 100, 255;
   --circle-size: 80%;
-  --blending: hard-light;
-
 
 }
 
@@ -63,7 +56,6 @@ a {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
-	margin-bottom: 40px;
 } 
 
 .section-title h1{
@@ -157,13 +149,13 @@ footer {
 
 
 /* ----------------- Background gradient ----------------- */
-.gradient-bg {
-	background: linear-gradient(47deg, #181a3a, #333a4b, #0a2c72);
-	background-size: 600% 600%;
 
-	-webkit-animation: gradient 14s ease infinite;
-	-moz-animation: gradient 14s ease infinite;
-	animation: gradient 14s ease infinite;
+
+.gradient-bg {
+
+	-webkit-animation: gradient 8s ease infinite;
+	-moz-animation: gradient 8s ease infinite;
+	animation: gradient 8s ease infinite;
 }
 
 @-webkit-keyframes gradient {

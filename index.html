@@ -48,13 +48,31 @@
 		</nav>
 		<div class="nav-overlay"></div>
     <div id="app">
-			<section class="homepage" id="home">
+			<section class="homepage gradient-bg" id="home">
 				<div>
 					<h1>Hi👋, I'm Jenny</h1>
 				</div>
 				<div class="desk-area gs_reveal">
-					<img class="desk light" src="desk-light.svg" alt="desk">
-					<img class="desk dark" src="desk-dark.svg" alt="desk">
+					<div class="desk-container">
+						<img class="desk light" src="desk-light.svg" alt="desk">
+						<img class="desk dark" src="desk-dark.svg" alt="desk">
+						<div class="cat-container">
+							<div class="cat">
+								<img src="cat.svg" class="cat">
+								<div class="follow-container">
+									<svg width="20" height="20" class="eye">
+											<circle cx="10" cy="10" r="10" fill="#290C17" class="eyeball_left" />
+											<circle cx="10" cy="10" r="4" fill="white" class="pupil_left" />
+									</svg>
+									<svg width="20" height="20" class="eye">
+										<circle cx="10" cy="10" r="10" fill="#290C17" class="eyeball_right" />
+										<circle cx="10" cy="10" r="4" fill="white" class="pupil_right" />
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="desk-overlay typewriter" >
 						<p>Software Developer</p>
 						<p>Game Programmer</p>
@@ -109,229 +127,231 @@
 				<img class="gear2 gs_reveal" src="gear.svg" alt="gear" width="80px">
 			</section>
 			
-			<section class="projects container">
+			<section class="projects">
+				<div class="container">
 
-				<div class="projects-row 1">
-					<div class="flex-2 gs_reveal gs_reveal_fromLeft">
-						<div class="project-wrapper">
-							<div class="upper">
-								<div class="year">2024</div>
-								<img src="projects/porous.jpg" alt="porous is he project image" width="100%">
-							</div>
-							<div class="chains">
-								<img src="chain.png" alt="chain" width="14px">
-								<img src="chain.png" alt="chain" width="14px">
-							</div>
-							<div class="below">
-								<div class="title"><b>Porous Is He</b></div> <hr>
-								<div class="description">
-									A 3D singleplayer puzzle platformer, where you play as a sponge named Po. 
-									Your mission? Escape from the clutches of your owner by using Po’s unique 
-									abilities to absorb water and oil. With three levels of increasing challenges, 
-									navigate through puzzles and obstacles, strategically soaking up water 
-									to put out fires and using oil to burn your way to freedom.
+					<div class="projects-row 1">
+						<div class="flex-2 gs_reveal gs_reveal_fromLeft">
+							<div class="project-wrapper">
+								<div class="upper">
+									<div class="year">2024</div>
+									<img src="projects/porous.jpg" alt="porous is he project image" width="100%">
 								</div>
-								<div class="project-footer">
-									<div class="tags">
-										<div class="tag">unity</div>
-										<div class="tag">c#</div>
-										<div class="tag">blender</div>
+								<div class="chains">
+									<img src="chain.png" alt="chain" width="14px">
+									<img src="chain.png" alt="chain" width="14px">
+								</div>
+								<div class="below">
+									<div class="title"><b>Porous Is He</b></div> <hr>
+									<div class="description">
+										A 3D singleplayer puzzle platformer, where you play as a sponge named Po. 
+										Your mission? Escape from the clutches of your owner by using Po’s unique 
+										abilities to absorb water and oil. With three levels of increasing challenges, 
+										navigate through puzzles and obstacles, strategically soaking up water 
+										to put out fires and using oil to burn your way to freedom.
 									</div>
-									<div class="project-links">
-										<a href="https://jennyho.itch.io/porous-is-he" target="_blank">
-											Itch.io <i class="fa-brands fa-itch-io"></i>
-										</a>
+									<div class="project-footer">
+										<div class="tags">
+											<div class="tag">unity</div>
+											<div class="tag">c#</div>
+											<div class="tag">blender</div>
+										</div>
+										<div class="project-links">
+											<a href="https://jennyho.itch.io/porous-is-he" target="_blank">
+												Itch.io <i class="fa-brands fa-itch-io"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="gamecard-wrapper">
+								<div class="gamecard draggable">
+									<div class="morph">
+										<img src = "gamecard.svg" alt="gamecard"/>
+										<div class="overlay">
+											<h3 class="title">Porous Is He</h3>
+											<img src="projects/porous.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+						<div class="flex-1 gs_reveal gs_reveal_fromRight">
+							<div class="project-wrapper">
+								<div class="upper">
+									<div class="year">2024</div>
+									<img src="projects/mywebsite.png" alt="my website project image" width="100%">
+								</div>
+								<div class="chains">
+									<img src="chain.png" alt="chain" width="14px">
+									<img src="chain.png" alt="chain" width="14px">
+								</div>
+								<div class="below">
+									<div class="title"><b>My Website</b></div> <hr>
+									<div class="description">
+										This is the second iteration of my website. It is made with the help 
+										of <a href="https://vitejs.dev/">Vite</a>, <a href="https://animejs.com/">anime.js</a>, 
+										<a href="https://gsap.com/">gsap</a>, <a href="https://draggabilly.desandro.com/">draggability</a>, 
+										and <a href="https://getbootstrap.com/">bootstrap</a>. It is also made 
+										with the help of my skills and creativity :wink:
+									</div>
+									<div class="project-footer">
+										<div class="tags">
+											<div class="tag">html</div>
+											<div class="tag">css</div>
+											<div class="tag">javascript</div>
+										</div>
+										<div class="project-links">
+											<a href="https://github.com/jennyho1/jennyho1.github.io" target="_blank">
+												Github <i class="fa-brands fa-github"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- <div class="gamecard-wrapper">
-							<div class="gamecard draggable">
-								<div class="morph">
-									<img src = "gamecard.svg" alt="gamecard"/>
-									<div class="overlay">
-										<h3 class="title">Porous Is He</h3>
-										<img src="projects/porous.jpg" alt="">
-									</div>
-								</div>
-							</div>
-						</div> -->
 					</div>
-					<div class="flex-1 gs_reveal gs_reveal_fromRight">
-						<div class="project-wrapper">
-							<div class="upper">
-								<div class="year">2024</div>
-								<img src="projects/mywebsite.png" alt="my website project image" width="100%">
-							</div>
-							<div class="chains">
-								<img src="chain.png" alt="chain" width="14px">
-								<img src="chain.png" alt="chain" width="14px">
-							</div>
-							<div class="below">
-								<div class="title"><b>My Website</b></div> <hr>
-								<div class="description">
-									This is the second iteration of my website. It is made with the help 
-									of <a href="https://vitejs.dev/">Vite</a>, <a href="https://animejs.com/">anime.js</a>, 
-									<a href="https://gsap.com/">gsap</a>, <a href="https://draggabilly.desandro.com/">draggability</a>, 
-									and <a href="https://getbootstrap.com/">bootstrap</a>. It is also made 
-									with the help of my skills and creativity :wink:
-								</div>
-								<div class="project-footer">
-									<div class="tags">
-										<div class="tag">html</div>
-										<div class="tag">css</div>
-										<div class="tag">javascript</div>
-									</div>
-									<div class="project-links">
-										<a href="https://github.com/jennyho1/jennyho1.github.io" target="_blank">
-											Github <i class="fa-brands fa-github"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<div class="projects-row 2">
-					<div class="flex-1 gs_reveal gs_reveal_fromLeft">
-						<div class="project-wrapper">
-							<div class="upper">
-								<div class="year">2023</div>
-								<img src="projects/wordle.png" alt="wordle project image" width="100%">
-							</div>
-							<div class="chains">
-								<img src="chain.png" alt="chain" width="14px">
-								<img src="chain.png" alt="chain" width="14px">
-							</div>
-							<div class="below">
-								<div class="title"><b>Wordle</b></div> <hr>
-								<div class="description">
-									Experience the Wordle game reinvented for multiplayer action. 
-									Built with <a href="https://www.npmjs.com/package/ws">WebSockets</a> 
-									for real-time player synchronization, 
-									<a href="https://expressjs.com/">Express</a> for backend RESTful APIs, 
-									and <a href="https://react.dev/">React</a> for frontend.
+					<div class="projects-row 2">
+						<div class="flex-1 gs_reveal gs_reveal_fromLeft">
+							<div class="project-wrapper">
+								<div class="upper">
+									<div class="year">2023</div>
+									<img src="projects/wordle.png" alt="wordle project image" width="100%">
 								</div>
-								<div class="project-footer">
-									<div class="tags">
-										<div class="tag">react</div>
-										<div class="tag">websockets</div>
-										<div class="tag">express</div>
+								<div class="chains">
+									<img src="chain.png" alt="chain" width="14px">
+									<img src="chain.png" alt="chain" width="14px">
+								</div>
+								<div class="below">
+									<div class="title"><b>Wordle</b></div> <hr>
+									<div class="description">
+										Experience the Wordle game reinvented for multiplayer action. 
+										Built with <a href="https://www.npmjs.com/package/ws">WebSockets</a> 
+										for real-time player synchronization, 
+										<a href="https://expressjs.com/">Express</a> for backend RESTful APIs, 
+										and <a href="https://react.dev/">React</a> for frontend.
 									</div>
-									<div class="project-links">
-										<a class="invalid" target="_blank">
-											Private <i class="fa-solid fa-code"></i></i>
-										</a>
+									<div class="project-footer">
+										<div class="tags">
+											<div class="tag">react</div>
+											<div class="tag">websockets</div>
+											<div class="tag">express</div>
+										</div>
+										<div class="project-links">
+											<a class="invalid" target="_blank">
+												Private <i class="fa-solid fa-code"></i></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex-2 gs_reveal gs_reveal_fromRight">
+							<div class="project-wrapper">
+								<div class="upper">
+									<div class="year">2024</div>
+									<img src="projects/galactic-ascent.png" alt="galactic ascent project image" width="100%">
+								</div>
+								<div class="chains">
+									<img src="chain.png" alt="chain" width="14px">
+									<img src="chain.png" alt="chain" width="14px">
+								</div>
+								<div class="below">
+									<div class="title"><b>Galactic Ascent</b></div> <hr>
+									<div class="description">
+										Embark on an epic galactic journey in your state-of-the-art spaceship. 
+										Ascend through the galaxy, overcoming challenges and hostile aliens 
+										who may drop helpful items. Manage limited resources wisely to ensure 
+										survival in the vastness of space. Created for the Ubisoft Toronto 
+										"<em><a href="https://toronto.ubisoft.com/develop-at-ubisoft/">Develop at Ubisoft</a> 
+											2024 programming challenge</em>".
+									</div>
+									<div class="project-footer">
+										<div class="tags">
+											<div class="tag">c++</div>
+										</div>
+										<div class="project-links">
+											<a class="invalid" target="_blank">
+												Private <i class="fa-solid fa-code"></i></i>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="flex-2 gs_reveal gs_reveal_fromRight">
-						<div class="project-wrapper">
-							<div class="upper">
-								<div class="year">2024</div>
-								<img src="projects/galactic-ascent.png" alt="galactic ascent project image" width="100%">
-							</div>
-							<div class="chains">
-								<img src="chain.png" alt="chain" width="14px">
-								<img src="chain.png" alt="chain" width="14px">
-							</div>
-							<div class="below">
-								<div class="title"><b>Galactic Ascent</b></div> <hr>
-								<div class="description">
-									Embark on an epic galactic journey in your state-of-the-art spaceship. 
-									Ascend through the galaxy, overcoming challenges and hostile aliens 
-									who may drop helpful items. Manage limited resources wisely to ensure 
-									survival in the vastness of space. Created for the Ubisoft Toronto 
-									"<em><a href="https://toronto.ubisoft.com/develop-at-ubisoft/">Develop at Ubisoft</a> 
-										2024 programming challenge</em>".
-								</div>
-								<div class="project-footer">
-									<div class="tags">
-										<div class="tag">c++</div>
-									</div>
-									<div class="project-links">
-										<a class="invalid" target="_blank">
-											Private <i class="fa-solid fa-code"></i></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<div class="projects-row 3">
-					<div class="flex-2 gs_reveal gs_reveal_fromLeft">
-						<div class="project-wrapper">
-							<div class="upper">
-								<div class="year">2020</div>
-								<img src="projects/doodlejump.png" alt="doodlejump project image" width="100%">
-							</div>
-							<div class="chains">
-								<img src="chain.png" alt="chain" width="14px">
-								<img src="chain.png" alt="chain" width="14px">
-							</div>
-							<div class="below">
-								<div class="title"><b>Doodle Jump</b></div> <hr>
-								<div class="description">
-									A recreation of the Doodle Jump game in MIPS assembly with a 
-									256x256 bitmap display. The game includes enemies that you can 
-									shoot, and different types of blocks such as bouncy, moving, 
-									and fragile blocks. Enjoy the classic gameplay brought to 
-									life with MIPS assembly coding.
+					<div class="projects-row 3">
+						<div class="flex-2 gs_reveal gs_reveal_fromLeft">
+							<div class="project-wrapper">
+								<div class="upper">
+									<div class="year">2020</div>
+									<img src="projects/doodlejump.png" alt="doodlejump project image" width="100%">
 								</div>
-								<div class="project-footer">
-									<div class="tags">
-										<div class="tag">mips assembly</div>
+								<div class="chains">
+									<img src="chain.png" alt="chain" width="14px">
+									<img src="chain.png" alt="chain" width="14px">
+								</div>
+								<div class="below">
+									<div class="title"><b>Doodle Jump</b></div> <hr>
+									<div class="description">
+										A recreation of the Doodle Jump game in MIPS assembly with a 
+										256x256 bitmap display. The game includes enemies that you can 
+										shoot, and different types of blocks such as bouncy, moving, 
+										and fragile blocks. Enjoy the classic gameplay brought to 
+										life with MIPS assembly coding.
 									</div>
-									<div class="project-links">
-										<a href="https://github.com/jennyho1/doodle-jump-assembly" target="_blank">
-											Github <i class="fa-brands fa-github"></i>
-										</a>
+									<div class="project-footer">
+										<div class="tags">
+											<div class="tag">mips assembly</div>
+										</div>
+										<div class="project-links">
+											<a href="https://github.com/jennyho1/doodle-jump-assembly" target="_blank">
+												Github <i class="fa-brands fa-github"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex-1 gs_reveal gs_reveal_fromRight">
+							<div class="project-wrapper">
+								<div class="upper">
+									<div class="year">2022</div>
+									<img src="projects/betterweather.png" alt="betterweather project image" width="100%">
+								</div>
+								<div class="chains">
+									<img src="chain.png" alt="chain" width="14px">
+									<img src="chain.png" alt="chain" width="14px">
+								</div>
+								<div class="below">
+									<div class="title"><b>Better Weather</b></div> <hr>
+									<div class="description">
+										A cozy weather app that not only shows weather updates but 
+										also recommends ideal outdoor activities based on current 
+										conditions. It predicts beautiful sunsets and suggests 
+										optimal fishing times by analyzing data from the 
+										<a href="https://openweathermap.org/api">OpenWeatherMap API</a>, 
+										including rain forecasts, cloud cover, humidity, and more.
+									</div>
+									<div class="project-footer">
+										<div class="tags">
+											<div class="tag">swift</div>
+											<div class="tag">xcode</div>
+										</div>
+										<div class="project-links">
+											<a href="https://github.com/jennyho1/better-weather" target="_blank">
+												Github <i class="fa-brands fa-github"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="flex-1 gs_reveal gs_reveal_fromRight">
-						<div class="project-wrapper">
-							<div class="upper">
-								<div class="year">2022</div>
-								<img src="projects/betterweather.png" alt="betterweather project image" width="100%">
-							</div>
-							<div class="chains">
-								<img src="chain.png" alt="chain" width="14px">
-								<img src="chain.png" alt="chain" width="14px">
-							</div>
-							<div class="below">
-								<div class="title"><b>Better Weather</b></div> <hr>
-								<div class="description">
-									A cozy weather app that not only shows weather updates but 
-									also recommends ideal outdoor activities based on current 
-									conditions. It predicts beautiful sunsets and suggests 
-									optimal fishing times by analyzing data from the 
-									<a href="https://openweathermap.org/api">OpenWeatherMap API</a>, 
-									including rain forecasts, cloud cover, humidity, and more.
-								</div>
-								<div class="project-footer">
-									<div class="tags">
-										<div class="tag">swift</div>
-										<div class="tag">xcode</div>
-									</div>
-									<div class="project-links">
-										<a href="https://github.com/jennyho1/better-weather" target="_blank">
-											Github <i class="fa-brands fa-github"></i>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
 				</div>
-				
 			</section>
 
 

@@ -7,6 +7,10 @@
 	align-items: center;
 	position: relative;
 	padding-top: 80px;
+	background: linear-gradient(47deg, #0c0033, #004355, #001a4d);
+	background-size: 500% 500%;
+
+	cursor: url('/pizza.svg'), auto;
 }
 
 .homepage h1 {
@@ -30,6 +34,8 @@ body.dark .desk-area .light {
 	width: 100%;
 	text-align: center;
 	position: relative;
+	display: flex;
+	justify-content: center;
 }
 
 .homepage .desk {
@@ -52,11 +58,11 @@ body.dark .desk-area .light {
 	font-size: max(min(3vw, 30px), 10px);
 }
 
-/* --------------------------Typewriter effect--------------------------*/
+/* ---------------Typewriter effect--------------- */
 
 .typewriter p {
   overflow: hidden;
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15em solid orange;
   white-space: nowrap;
   margin: 0 auto; 
 
@@ -99,3 +105,54 @@ body.dark .desk-area .light {
   from { border-color: orange; }
   to { border-color: transparent; }
 }
+
+
+/* ---------------Cursor following---------------*/
+
+.desk-container {
+	width: 100%;
+	max-width: 1000px;
+	min-width: 320px;
+	position: relative;
+}
+
+.cat-container {
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
+	.cat-container {
+		display: block;
+		position: absolute;
+		bottom: 10%;
+		left: 5%;
+	}
+	
+	.cat {
+		position: relative;
+		width: 150px;
+	}
+	
+	.follow-container{
+		margin: auto;
+		position: absolute;
+		top: 56px;
+		left: 43px;
+		display: flex;
+		gap: 32px;
+	}
+	.image{
+		position: absolute;
+		top: 250px;
+		left: 620px;
+		z-index: -1;
+	}
+	.pupil_left{
+		position:relative;
+	}
+	.pupil_right{
+		position:relative;
+	}
+}
+
+
