@@ -9,7 +9,6 @@
 	padding-top: 80px;
 	background: linear-gradient(47deg, #0c0033, #004355, #001a4d);
 	background-size: 500% 500%;
-	cursor: url('/pizza.svg'), auto;
 }
 body.light .homepage {
 	background: linear-gradient(47deg, #d4dcff, #92ccff, #d4dcff);
@@ -144,7 +143,6 @@ body.dark .desk-area .light {
 		position: absolute;
 		top: 250px;
 		left: 620px;
-		z-index: -1;
 	}
 	.pupil_left{
 		position:relative;

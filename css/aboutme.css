@@ -13,7 +13,6 @@ body.light .about-me {
 	background-color: var(--blue-1);
 	padding: 30px;
 	box-shadow: 0px 0px 15px rgb(0, 0, 0);
-	z-index: 999;
 	position: relative;
 }
 body.light .about-me-text {
@@ -42,7 +41,6 @@ body.light .about-me-text {
 	top: 0;
 	left: 0;
 	width: 0%;
-	z-index: 0;
 }
 .orange-gradient {
 	background: rgb(148,84,0);
