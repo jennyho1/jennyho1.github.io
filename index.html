@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/apng" href="/logo.svg" />
+    <meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/apng" href="/logo.svg"/>
 
 		<!-- fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +57,7 @@
     <div id="app">
 
 			<section class="homepage gradient-bg center" id="home">
-				<div>
+				<div class="gs_reveal">
 					<h1>Hi👋, I'm Jenny</h1>
 				</div>
 				<div class="desk-area gs_reveal">
@@ -66,7 +66,7 @@
 						<img class="desk dark" src="desk-dark.svg" alt="desk">
 						<div class="cat-container">
 							<div class="cat">
-								<img src="cat.svg" class="cat">
+								<img src="cat.svg" class="cat" alt="cat">
 								<div class="follow-container">
 									<svg width="20" height="20" class="eye">
 											<circle cx="10" cy="10" r="10" fill="#290C17" class="eyeball_left" />
@@ -128,14 +128,14 @@
 
 
 			<section class="section-title" id="projects">
-				<img class="gear1 gs_reveal" src="gear.svg" alt="gear" width="80px">
+				<img class="gear1 gs_reveal" src="gear.svg" alt="gear" width="80">
 				<div class="gs_reveal">
 					<h1>Projects</h1>
 				</div>
-				<img class="gear2 gs_reveal" src="gear.svg" alt="gear" width="80px">
+				<img class="gear2 gs_reveal" src="gear.svg" alt="gear" width="80">
 			</section>
 			
-			<section class="projects">
+			<div class="projects">
 				<div class="container">
 
 					<div class="projects-row 1">
@@ -143,7 +143,7 @@
 							<div class="project-wrapper">
 								<div class="upper">
 									<div class="year">2024</div>
-									<img src="projects/porous.jpg" alt="porous is he project image" width="100%">
+									<img src="projects/porous.jpg" alt="porous is he project image">
 								</div>
 								<div class="chains">
 									<img src="chain.png" alt="chain">
@@ -188,7 +188,7 @@
 							<div class="project-wrapper">
 								<div class="upper">
 									<div class="year">2024</div>
-									<img src="projects/mywebsite.png" alt="my website project image" width="100%">
+									<img src="projects/mywebsite.png" alt="my website project image">
 								</div>
 								<div class="chains">
 									<img src="chain.png" alt="chain">
@@ -227,7 +227,7 @@
 							<div class="project-wrapper">
 								<div class="upper">
 									<div class="year">2023</div>
-									<img src="projects/wordle.png" alt="wordle project image" width="100%">
+									<img src="projects/wordle.png" alt="wordle project image">
 								</div>
 								<div class="chains">
 									<img src="chain.png" alt="chain">
@@ -249,8 +249,8 @@
 											<div class="tag">express</div>
 										</div>
 										<div class="project-links">
-											<a class="invalid" target="_blank">
-												Private <i class="fa-solid fa-code"></i></i>
+											<a href="" class="invalid" target="_blank">
+												Private <i class="fa-solid fa-code"></i>
 											</a>
 										</div>
 									</div>
@@ -261,7 +261,7 @@
 							<div class="project-wrapper">
 								<div class="upper">
 									<div class="year">2024</div>
-									<img src="projects/galactic-ascent.png" alt="galactic ascent project image" width="100%">
+									<img src="projects/galactic-ascent.png" alt="galactic ascent project image">
 								</div>
 								<div class="chains">
 									<img src="chain.png" alt="chain">
@@ -282,8 +282,8 @@
 											<div class="tag">c++</div>
 										</div>
 										<div class="project-links">
-											<a class="invalid" target="_blank">
-												Private <i class="fa-solid fa-code"></i></i>
+											<a href="" class="invalid" target="_blank">
+												Private <i class="fa-solid fa-code"></i>
 											</a>
 										</div>
 									</div>
@@ -297,7 +297,7 @@
 							<div class="project-wrapper">
 								<div class="upper">
 									<div class="year">2020</div>
-									<img src="projects/doodlejump.png" alt="doodlejump project image" width="100%">
+									<img src="projects/doodlejump.png" alt="doodlejump project image">
 								</div>
 								<div class="chains">
 									<img src="chain.png" alt="chain">
@@ -329,7 +329,7 @@
 							<div class="project-wrapper">
 								<div class="upper">
 									<div class="year">2022</div>
-									<img src="projects/betterweather.png" alt="betterweather project image" width="100%">
+									<img src="projects/betterweather.png" alt="betterweather project image">
 								</div>
 								<div class="chains">
 									<img src="chain.png" alt="chain">
@@ -362,7 +362,7 @@
 					</div>
 
 				</div>
-			</section>
+			</div>
 
 
 
@@ -402,18 +402,7 @@
 				</div>
 			</div>
 
-			<div>
-				<svg>
-					<defs>
-						<filter id="goo">
-							<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="name"/>
-							<feColorMatrix in="name" mode="matrix"
-									values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 30 -15 " result="aab"/>
-							<feBlend in="SourceGraphic" in2="aab"/>
-						</filter>
-					</defs>
-				</svg>
-			</div>
+
 			<div class="back-to-top gs_reveal">
 				<a href="#" title="Back to top">
 					<i class="fa-solid fa-arrow-up"></i>

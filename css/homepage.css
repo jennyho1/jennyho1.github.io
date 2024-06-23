@@ -17,8 +17,6 @@ body.light .homepage {
 
 .homepage h1 {
 	font-size: 4.4em;
-	translate: 0 -250px;
-	flex-grow: 2;
 }
 
 /* --------------------------Desk Area--------------------------*/
