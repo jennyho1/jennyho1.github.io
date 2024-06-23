@@ -178,8 +178,8 @@ for (const draggie of draggies) {
 var elem = document.querySelector('.card-area');
 var droppable = new Droppable( elem, {
   onDrop : function( instance, draggableEl ) {
-		console.log("dropped");
+		// console.log("dropped");
 	}
 });
 
-console.log(droppable)
+// console.log(droppable)
