@@ -1,0 +1,157 @@
+.homepage {
+	height: 100vh;
+	min-height: 375px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-top: 80px;
+	background: linear-gradient(47deg, #0c0033, #004355, #001a4d);
+	background-size: 500% 500%;
+	cursor: url('/pizza.svg'), auto;
+}
+body.light .homepage {
+	background: linear-gradient(47deg, #d4dcff, #92ccff, #d4dcff);
+	background-size: 500% 500%;
+}
+
+.homepage h1 {
+	font-size: 4.4em;
+	translate: 0 -250px;
+	flex-grow: 2;
+}
+
+/* --------------------------Desk Area--------------------------*/
+
+body.light .desk-area .dark {
+	display:none;
+}
+
+body.dark .desk-area .light {
+	display:none;
+}
+
+.desk-area {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.homepage .desk {
+	width: 100%;
+	max-width: 1000px;
+	min-width: 320px;
+	height:auto;
+} 
+
+.desk-area .desk-overlay {
+	position: absolute;
+  top: 40%;
+  left: 50%;
+  color: black;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	font-size: max(min(3vw, 30px), 10px);
+}
+
+/* ---------------Typewriter effect--------------- */
+
+.typewriter p {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto; 
+
+	&:nth-child(1) {
+		visibility: hidden;
+		animation: 
+			typing 1.2s steps(25, end) 0.2s forwards,
+			blink-caret .75s step-end infinite,
+			hide-caret 0s linear 1.5s forwards;
+	}
+	&:nth-child(2) {
+		visibility: hidden;
+		animation: 
+			typing 1.2s steps(40, end) 1.4s forwards,
+			blink-caret .75s step-end infinite,
+			hide-caret 0s linear 2.7s forwards;
+	}
+	&:nth-child(3) {
+		visibility: hidden;
+		animation: 
+			typing 1.2s steps(40, end) 2.6s forwards,
+			blink-caret .75s step-end infinite;
+	}
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0; visibility: visible; }
+  to { width: 100%; visibility: visible; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Keyframe to hide the cursor */
+@keyframes hide-caret {
+  from { border-color: orange; }
+  to { border-color: transparent; }
+}
+
+
+/* ---------------Cursor following---------------*/
+
+.desk-container {
+	width: 100%;
+	max-width: 1000px;
+	min-width: 320px;
+	position: relative;
+}
+
+.cat-container {
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
+	.cat-container {
+		display: block;
+		position: absolute;
+		bottom: 10%;
+		left: 5%;
+	}
+	
+	.cat {
+		position: relative;
+		width: 150px;
+	}
+	
+	.follow-container{
+		margin: auto;
+		position: absolute;
+		top: 56px;
+		left: 43px;
+		display: flex;
+		gap: 32px;
+	}
+	.image{
+		position: absolute;
+		top: 250px;
+		left: 620px;
+		z-index: -1;
+	}
+	.pupil_left{
+		position:relative;
+	}
+	.pupil_right{
+		position:relative;
+	}
+}
+
+

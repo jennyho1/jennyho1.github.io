@@ -1,0 +1,208 @@
+:root {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.5;
+
+
+	/* color-scheme: light dark; */
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; 
+
+
+  --color-bg1: rgb(43, 43, 68);
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 86, 94, 190;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+
+	--gradient-turq: #0decf0;
+	--gradient-blue: #182bf5;
+
+	--default-bg: #171d32;
+	--blue-1: #091C32;
+	--blue-2: #2a4a71;
+	--light-blue: #c0e6fd;
+	--light-blue-2: rgb(110, 240, 225);
+	/* project description links */
+	--light-green-1: #cdffc8;
+	--light-green-2: #20ff0b;
+	/* project tags */
+	--green-1: #0e5d00;
+	--green-2: #99ffc0;
+	/* project links */
+	--pink-1: #ffd0e8;
+	--pink-2: #ffaad6;
+
+	--easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+
+	/* light mode (lm) */
+	--default-bg-lm: #d4dcff;
+	--blue-1-lm: #c0deff;
+	--blue-2-lm: #d6d6d6;
+	--light-blue-lm: #051d5c;
+	/* project description links */
+	--light-green-1-lm: #0a7400;
+	--light-green-2-lm: #44b13a;
+}
+
+/* fonts  */
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+	min-width: 320px;
+	background-color: var(--default-bg);
+	color: white;
+	font-family: 'Rubik', sans-serif;
+}
+body.light {
+	background-color: var(--default-bg-lm);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.section-title {
+	background: var(--gradient-turq);
+	background: linear-gradient(155deg, var(--gradient-turq) 0%, var(--gradient-blue) 100%);
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+} 
+.section-title h1{
+	padding: 16px 28px;
+	margin: 0;
+	border: 4px solid;
+  border-image-slice: 1;
+	border-image-source: linear-gradient(155deg, var(--gradient-blue), var(--gradient-turq));
+}
+
+.section-title div {
+	background-color: var(--default-bg);
+  padding: 6px;
+	margin: 60px 10px;
+	transition: background-color 1s var(--easeOutExpo);
+}
+body.light .section-title div {
+	background-color: var(--default-bg-lm);
+}
+
+.center {
+	text-align: center;
+}
+
+/* .gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+} */
+
+/* ----------------- Footer section ----------------- */
+
+.back-to-top {
+	display: flex;
+	justify-content: right;
+	margin: 40px;
+}
+
+.back-to-top a i{
+	background-color: black;
+	font-size: 1.3em;
+	border-radius: 100%;
+	padding: 10px 13px;
+	animation: bounce 1.4s infinite;
+}
+@keyframes bounce {
+	0%, 100% {
+			transform: translateY(0);
+	}
+	50% {
+			transform: translateY(-5px);
+	}
+}
+
+footer {
+  display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 250px;
+	background-color: var(--default-bg);
+	background-image: url('/footer-dark.svg');
+	padding-top: 20px;
+}
+body.light footer{
+	background-color: var(--default-bg-lm);
+	background-image: url('/footer-light.svg');
+}
+
+/* ----------------- Footer icons ----------------- */
+.button-group {
+	display: flex;
+	justify-content: center;
+}
+
+.attract-container {
+	padding: 30px;
+	position: relative;
+}
+
+.attract {
+	background-color: black;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	transition: transform 0.1s;
+	position: relative;
+	z-index: 1;
+	i{
+		color: white;
+	}
+}
+
+
+/* ----------------- Background gradient animation----------------- */
+
+.gradient-bg {
+	-webkit-animation: gradient 8s ease infinite;
+	-moz-animation: gradient 8s ease infinite;
+	animation: gradient 8s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0%{background-position:87% 0%}
+	50%{background-position:14% 100%}
+	100%{background-position:87% 0%}
+}
+@-moz-keyframes gradient {
+	0%{background-position:87% 0%}
+	50%{background-position:14% 100%}
+	100%{background-position:87% 0%}
+}
+@keyframes gradient {
+	0%{background-position:87% 0%}
+	50%{background-position:14% 100%}
+	100%{background-position:87% 0%}
+}
+
+

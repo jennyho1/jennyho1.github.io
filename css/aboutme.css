@@ -1,0 +1,58 @@
+.about-me {
+	position: relative;
+	padding: 160px 0;
+	background: linear-gradient(47deg, #181a3a, #333a4b, #0a2c72);
+	background-size: 600% 600%;
+}
+body.light .about-me {
+	background: linear-gradient(47deg, #fff4db, #ffdead, #fff4db);
+	background-size: 600% 600%;
+}
+
+.about-me-text {
+	background-color: var(--blue-1);
+	padding: 30px;
+	box-shadow: 0px 0px 15px rgb(0, 0, 0);
+	z-index: 999;
+	position: relative;
+}
+body.light .about-me-text {
+	background-color: var(--blue-1-lm);
+}
+
+.my-picture {
+	position: relative;
+}
+#pin {
+	position: absolute;
+	top: -20px;
+	left: 45%;
+	width: 50px;
+}
+#me {
+	box-shadow: 0px 0px 15px rgb(0, 0, 0);
+	width: 100%;
+	min-width: 280px;
+	max-width: 400px;
+}
+
+.left-side {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	z-index: 0;
+}
+.orange-gradient {
+	background: rgb(148,84,0);
+	background: linear-gradient(0deg, rgba(148,84,0,1) 0%, rgba(149,117,0,1) 100%);
+}
+
+
+@media (max-width: 991px) {
+	.about-me .row {
+		display: flex;
+		flex-direction: column;
+	}
+}
