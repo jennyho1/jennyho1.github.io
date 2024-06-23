@@ -1,12 +1,6 @@
 import anime from 'animejs';
 import gsap from 'gsap';
 
-anime({
-  targets: ".homepage h1",
-	translateY: 250,
-  easing: 'spring(1, 80, 10, 0)',
-	loop: false
-});
 
 //  ----------- section headers -----------
 gsap.registerPlugin(ScrollTrigger);

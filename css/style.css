@@ -175,9 +175,9 @@ body.light footer{
 	transition: transform 0.1s;
 	position: relative;
 	z-index: 1;
-	i{
-		color: white;
-	}
+}
+.attract i {
+	color: white;
 }
 
 
