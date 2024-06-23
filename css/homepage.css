@@ -9,13 +9,15 @@
 	padding-top: 80px;
 	background: linear-gradient(47deg, #0c0033, #004355, #001a4d);
 	background-size: 500% 500%;
-
 	cursor: url('/pizza.svg'), auto;
+}
+body.light .homepage {
+	background: linear-gradient(47deg, #d4dcff, #92ccff, #d4dcff);
+	background-size: 500% 500%;
 }
 
 .homepage h1 {
 	font-size: 4.4em;
-	text-align: center;
 	translate: 0 -250px;
 	flex-grow: 2;
 }
@@ -32,7 +34,6 @@ body.dark .desk-area .light {
 
 .desk-area {
 	width: 100%;
-	text-align: center;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -49,12 +50,10 @@ body.dark .desk-area .light {
 	position: absolute;
   top: 40%;
   left: 50%;
-	text-align: center;
   color: black;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  text-align: center;
 	font-size: max(min(3vw, 30px), 10px);
 }
 

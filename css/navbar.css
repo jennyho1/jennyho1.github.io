@@ -2,7 +2,7 @@
 #navbar {
 	height: 60px;
 	width: 100%;
-	background-color: #62626282;
+	background-color: #62626297;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -11,14 +11,18 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	transition: top 0.3s;
+	transition: top 0.3s, background-color 1s var(--easeOutExpo);
 	z-index: 1000;
 	-webkit-backdrop-filter: blur(8px);
 	backdrop-filter: blur(8px);
 
 	border-bottom: 4px solid;
   border-image-slice: 1;
-	border-image-source: linear-gradient(to left, #1f32ff, #23fbff);
+	border-image-source: linear-gradient(to left, var(--gradient-blue), var(--gradient-turq));
+}
+
+body.light #navbar {
+	background-color: #e7e7e797;
 }
 
 body.dark .nav-links a{
@@ -32,29 +36,26 @@ body.light .nav-links a{
 	display: flex;
 	align-items: center;
 	gap: 35px;
-
-	font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-	transition: all 1s linear;
 }
 
 .nav-links a {
-	transition: color 1s, background-color .3s;
+	transition: color 1s var(--easeOutExpo);
 	position: relative;
-	text-shadow: 0px 0px 10px rgb(0, 1, 47);
 }
 
 .nav-links a:hover{
-	text-shadow: 0px 0px 10px rgb(0, 251, 255);
+	text-shadow: 0px 0px 10px var(--light-blue-2);
 	transform: scale(1.1);
+}
+body.light .nav-links a:hover{
+	text-shadow: 0px 0px 10px rgb(249, 249, 91);
 }
 .nav-links a i:hover{
 	transform: scale(1.1);
 }
 
 
-/* dark mode switch */
+/* dark/light mode switch */
 
 .switch-background {
   background-color: rgb(23, 29, 50);
@@ -62,10 +63,13 @@ body.light .nav-links a{
   width: 65px;
   border-radius: 100px;
 	display: inline-block;
-	box-shadow: 0px 0px 5px rgb(255, 255, 255);
+	box-shadow: 0px 0px 5px white;
+}
+body.light .switch-background{
+	box-shadow: 0px 0px 5px black;
 }
 .innerSwitch {
-  background-color: #6ef0e1;
+  background-color: var(--light-blue-2);
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -85,10 +89,13 @@ body.light .nav-links a{
 .hamburger div{
 	width: 30px;
 	height:3px;
-	background: #f2f5f7;
+	background: white;
 	margin: 5px;
-	transition: all 0.3s ease;
+	transition: all 0.3s ease, background 1s var(--easeOutExpo);
 	border-radius: 3px;
+}
+body.light .hamburger div{
+	background: black;
 }
 .hamburger{
 	display: none;
@@ -107,25 +114,28 @@ body.light .nav-links a{
 /* responsive nav */
 @media screen and (max-width: 550px) {
 	.hamburger {
-			display: block;
-			transition: all 0.7s ease;
+		display: block;
+		transition: all 0.7s ease;
 	}
 
 	.nav-links {
-			position: fixed;
-			top: 60px;
-			right: -100vw;
-			width: 100%;
-			height: auto;
-			padding: 30px 0;
-			flex-direction: column;
-			transition: right 0.5s ease-out;
-			display: flex;
-			background-color: #1f2248;
+		position: fixed;
+		top: 60px;
+		right: -100vw;
+		width: 100%;
+		height: auto;
+		padding: 30px 0;
+		flex-direction: column;
+		transition: right 0.5s ease-out, background-color 1s var(--easeOutExpo);
+		display: flex;
+		background-color: var(--default-bg);
+	}
+	body.light .nav-links {
+		background-color: var(--default-bg-lm);
 	}
 
 	.nav-links.open {
-			right: 0vw;
+		right: 0vw;
 	}
 
 	.nav-overlay{
@@ -145,7 +155,6 @@ body.light .nav-links a{
 		right: 0;
 	}
 
-
 	.nav-links div{
 		opacity: 0;
 	}
@@ -164,8 +173,6 @@ body.light .nav-links a{
 	.nav-links div.link-fade{
 		opacity: 1;
 	}
-
-
 }
 
 

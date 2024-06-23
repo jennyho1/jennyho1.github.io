@@ -25,8 +25,8 @@
 	margin: 0 auto;
 	border: 10px solid;
 	border-image-slice: 1;
-	border-image-source: linear-gradient(155deg, rgba(5,211,255,1) 0%, rgba(24,114,255,1) 47%, rgba(0,18,255,1) 100%);
-	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+	border-image-source: linear-gradient(155deg, var(--gradient-turq) 0%, var(--gradient-blue) 100%);
+	box-shadow: 0px 0px 10px black;
 }
 
 .project-wrapper .year {
@@ -35,27 +35,46 @@
 	position: absolute;
 	top: -30px;
 	right: -30px;
-	background-color: #2a4a71;
-	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+	background-color: var(--blue-2);
+	box-shadow: 0px 0px 10px black;
+	transition: background-color 1s var(--easeOutExpo);
+}
+body.light .project-wrapper .year {
+	background-color: var(--blue-2-lm);
 }
 
 .project-wrapper .below {
-	background-color: #091C32;
+	background-color: var(--blue-1);
 	width: 100%;
 	padding: 16px;
-	box-shadow: 0px 0px 10px rgb(0, 0, 0);
+	box-shadow: 0px 0px 10px black;
+	transition: background-color 1s var(--easeOutExpo);
+}
+body.light .project-wrapper .below {
+	background-color: var(--blue-1-lm);
 }
 
 .project-wrapper .title {
 	font-size: 1.5em;
 }
 .project-wrapper .description {
-	color: rgb(218, 241, 255);
+	transition: color 1s var(--easeOutExpo);
+	color: var(--light-blue);
 	a {
-		color: rgb(205, 255, 200);
+		transition: color 1s var(--easeOutExpo);
+		color: var(--light-green-1);
 	}
 	a:hover {
-		color: rgb(32, 255, 11);
+		color: var(--light-green-2);
+	}
+}
+body.light .project-wrapper .description {
+	color: var(--light-blue-lm);
+	a {
+		color: var(--light-green-1-lm);
+	}
+	a:hover {
+		color: var(--light-green-2-lm);
 	}
 }
 
@@ -63,6 +82,9 @@
 	display: flex;
 	justify-content: space-around;
 	padding: 0 20px;
+	img {
+		width: 12px;
+	}
 }
 
 .project-footer {
@@ -78,15 +100,13 @@
 	display: flex;
 	flex-flow: row wrap;
 	font-size: 0.8em;
-	color: rgb(14, 93, 0);
-	font-family: "Space Mono", monospace;
-	font-weight: 700;
+	color: var(--green-1);
 	line-height: 1;
 	gap: 8px;
 }
 .tag {
 	display: inline;
-	background-color: rgb(153, 255, 192);
+	background-color: var(--green-2);
 	padding: 5px;
 	border-radius: 2px;
 }
@@ -94,10 +114,10 @@
 	padding: 5px;
 	border-radius: 2px;
 	color: rgb(68, 0, 35);
-	background-color: rgb(255, 208, 232);
+	background-color: var(--pink-1);
 }
 .project-links a:hover {
-	background-color: rgb(255, 155, 207);
+	background-color: var(--pink-2);
 }
 .project-links .invalid{
 	pointer-events: none;
