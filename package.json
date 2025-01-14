@@ -9,14 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.4.5"
+    "vite": "^6.0.7"
   },
   "dependencies": {
-    "animejs": "^3.2.1",
+    "animejs": "^3.2.2",
     "baffle": "^0.3.6",
-    "bootstrap": "^5.3.1",
+    "bootstrap": "^5.3.3",
     "dat.gui": "^0.7.9",
     "draggabilly": "^3.0.0",
-    "gsap": "^3.12.2"
+    "gsap": "^3.12.5"
   }
 }
