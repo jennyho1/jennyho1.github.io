@@ -115,6 +115,11 @@ body.light .project-wrapper .description a:hover {
 	padding: 5px;
 	border-radius: 2px;
 }
+.project-links{
+	display: flex;
+	flex-flow: row wrap;
+	gap: 8px;
+}
 .project-links a{
 	padding: 5px;
 	border-radius: 2px;
