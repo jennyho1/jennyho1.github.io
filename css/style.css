@@ -36,8 +36,12 @@
 	--green-1: #0e5d00;
 	--green-2: #99ffc0;
 	/* project links */
-	--pink-1: #ffd0e8;
-	--pink-2: #ffaad6;
+	/* --pink-1: #ffd0e8;
+	--pink-2: #ffaad6; */
+	--pink-0: #ffcce6;
+	--pink-1: #ffaad6;
+	--pink-2: #ff7cc0;
+	--pink-3: #440023;
 
 	--easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
 

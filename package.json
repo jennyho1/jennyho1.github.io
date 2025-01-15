@@ -13,10 +13,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.2",
-    "baffle": "^0.3.6",
     "bootstrap": "^5.3.3",
-    "dat.gui": "^0.7.9",
-    "draggabilly": "^3.0.0",
     "gsap": "^3.12.5"
   }
 }

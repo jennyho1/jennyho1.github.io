@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/aboutme.css" />
     <link rel="stylesheet" href="css/block_reveal.css" />
+    <link rel="stylesheet" href="css/popup.css" />
 
     <title>Jenny Ho</title>
   </head>
@@ -230,6 +231,9 @@
                 <div class="below">
                   <div class="title">
                     <b>Laddergram</b>
+										<button class="play-button" onclick="openPopup('edxG2nZ_mmo');">
+                      Watch Video
+                    </button>
                   </div>
                   <hr />
                   <div class="description">
@@ -296,7 +300,8 @@
                         href="https://main.d2kfsc7cciuwcr.amplifyapp.com/"
                         target="_blank"
                       >
-                        Webapp <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Webapp
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                       </a>
                       <a
                         href="https://github.com/jennyho1/sudoku-webapp"
@@ -326,7 +331,12 @@
                   <img src="chain.png" alt="chain" />
                 </div>
                 <div class="below">
-                  <div class="title"><b>Porous Is He</b></div>
+                  <div class="title">
+                    <b>Porous Is He</b>
+										<button class="play-button" onclick="openPopup('YfeFpsQxUmw');">
+                      Watch Video
+                    </button>
+                  </div>
                   <hr />
                   <div class="description">
                     A 3D singleplayer puzzle platformer, where you play as a
@@ -354,17 +364,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="gamecard-wrapper">
-								<div class="gamecard draggable">
-									<div class="morph">
-										<img src = "gamecard.svg" alt="gamecard"/>
-										<div class="overlay">
-											<h3 class="title">Porous Is He</h3>
-											<img src="projects/porous.jpg" alt="">
-										</div>
-									</div>
-								</div>
-							</div> -->
             </div>
             <div class="flex-1 gs_reveal gs_reveal_fromRight">
               <div class="project-wrapper">
@@ -388,9 +387,7 @@
                     <a href="https://vitejs.dev/" target="_blank">Vite</a>,
                     <a href="https://animejs.com/" target="_blank">anime.js</a>,
                     <a href="https://gsap.com/" target="_blank">gsap</a>,
-                    <a href="https://draggabilly.desandro.com/" target="_blank"
-                      >draggability</a
-                    >, and
+                    and
                     <a href="https://getbootstrap.com/" target="_blank"
                       >bootstrap</a
                     >. It is also made with the help of my skills and creativity
@@ -471,14 +468,17 @@
                   <img src="chain.png" alt="chain" />
                 </div>
                 <div class="below">
-                  <div class="title"><b>Galactic Ascent</b></div>
+                  <div class="title"><b>Galactic Ascent</b>
+										<button class="play-button" onclick="openPopup('-vUNVm9jEG0');">
+										Watch Video
+									</button></div>
                   <hr />
                   <div class="description">
                     Embark on an epic galactic journey in your state-of-the-art
                     spaceship. Ascend through the galaxy, overcoming challenges
                     and hostile aliens who may drop helpful items. Manage
                     limited resources wisely to ensure survival in the vastness
-                    of space. Created for the Ubisoft Toronto "<em
+                    of space. Created in just 3 days for the Ubisoft Toronto "<em
                       ><a
                         href="https://toronto.ubisoft.com/develop-at-ubisoft/"
                         target="_blank"
@@ -589,38 +589,14 @@
         </div>
       </div>
 
-      <!-- <div class="project-grid">
-					<div class="grid-item draggable">
-						<div class="morph">
-							<img src = "gamecard.svg" alt="gamecard"/>
-							<div class="overlay">
-								<h3 class="title">Porous Is He</h3>
-								<img src="projects/porous.jpg" alt="">
-								<div class="description">3D puzzle platformer game</div>
-								<div class="description"><em>Unity</em> | <em>C#</em></div>
-							</div>
-						</div>
-					</div>
-					<div class="grid-item draggable">
-						<div class="morph">
-							<img src = "gamecard.svg" alt="gamecard"/>
-							<div class="overlay">
-								<h3 class="title">Porous Is He</h3>
-								<img src="porous.jpg" alt="">
-								<div class="description">3D puzzle platformer game</div>
-								<div class="description"><em>Unity</em> | <em>C#</em></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-
-      <div class="drop-area">
-        <div>
-          <div class="card-area"></div>
-          <div class="nintendoswitch">
-            <img src="nintendoswitch.svg" alt="nintendo switch" />
-          </div>
+      <div id="popup-container" class="popup-container" onclick="closePopup()">
+        <div class="video-container">
+          <iframe
+            id="youtube-iframe"
+            src=""
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
 
@@ -672,6 +648,26 @@
     <script type="module" src="js/homepage.js"></script>
     <script type="module" src="js/projects.js"></script>
     <script type="module" src="js/footer.js"></script>
+    <script type="text/javascript">
+      function openPopup(videoId) {
+        var popupContainer = document.getElementById("popup-container");
+        var youtubeIframe = document.getElementById("youtube-iframe");
+        youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+        popupContainer.classList.add("show");
+      }
+
+      function closePopup() {
+        var popupContainer = document.getElementById("popup-container");
+        var youtubeIframe = document.getElementById("youtube-iframe");
+        youtubeIframe.src = "";
+        popupContainer.classList.remove("show");
+      }
+
+      var popupButton = document.getElementById("popup-button");
+      popupButton.addEventListener("click", function () {
+        openPopup("YfeFpsQxUmw");
+      });
+    </script>
 
     <script
       src="https://kit.fontawesome.com/4e69695e6b.js"
