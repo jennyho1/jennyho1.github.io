@@ -57,7 +57,26 @@ body.light .project-wrapper .below {
 	background-color: var(--blue-1-lm);
 }
 
+.play-button {
+	width: fit-content;
+	border: none;
+	border-radius: 2px;
+	font-size: 0.8em;
+	color: var(--pink-3);
+	background-color: var(--pink-1);
+	border: 2px solid;
+  border-color: var(--pink-0) var(--pink-3) var(--pink-3) var(--pink-0);
+}
+.play-button:hover {
+	background-color: var(--pink-2);
+}
+
 .project-wrapper .title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.project-wrapper .title b {
 	font-size: 1.5em;
 }
 .project-wrapper .description {
@@ -91,7 +110,6 @@ body.light .project-wrapper .description a:hover {
 	width: 12px;
 }
 
-
 .project-footer {
 	display: flex; 
 	flex-flow: row wrap; 
@@ -121,10 +139,12 @@ body.light .project-wrapper .description a:hover {
 	gap: 8px;
 }
 .project-links a{
-	padding: 5px;
+	padding: 2px 6px;
 	border-radius: 2px;
-	color: rgb(68, 0, 35);
+	color: var(--pink-3);
 	background-color: var(--pink-1);
+	border: 2px solid;
+  border-color: var(--pink-0) var(--pink-3) var(--pink-3) var(--pink-0);
 }
 .project-links a:hover {
 	background-color: var(--pink-2);
@@ -148,129 +168,3 @@ body.light .project-wrapper .description a:hover {
 		justify-content: space-evenly;
 	}
 }
-
-
-/* --------------------------------------- */
-.gamecard-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0%;
-	width: 40%;
-}
-.gamecard {
-	position: relative;
-}
-.gamecard img{
-	width: 100%;
-  height: auto;
-  display: block;
-}
-
-.animate {
-  transition: transform 0.5s ease;
-}
-.draggable:hover {
-	cursor: grab;
-}
-
-.draggable:active,
-.draggable.is-dragging {
-	cursor: grabbing;
-	z-index: 444;
-}
-
-.draggable:active .morph,
-.draggable.is-dragging .morph{
-	transform: scale3d(0.5, 0.5, 1);
-}
-.morph {
-	transition: transform 0.2s ease-in-out;
-}
-
-
-/* .project-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, 200px);
-	gap: 40px;
-} */
-
-/* .grid-item {
-	position: relative;
-}
-
-.grid-item img{
-	width: 100%;
-  height: auto;
-  display: block;
-} */
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 12px 12px 33px 12px;
-  box-sizing: border-box;
-}
-
-.overlay > .title {
-  margin: 23px 0 10px 0 ;
-  font-size: 1.4em;
-}
-
-.overlay > img {
-	margin: 0;
-	padding: 0;
-	height: 102px;
-	margin-bottom: 2px;
-}
-
-
-
-.drop-area {
-	position: fixed;
-	top: 100%;
-	left: 0;
-	z-index: 445;
-	width: 100%;
-	height: 16em;
-	/* background: #cc6055; */
-	text-align: center;
-	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6,0,0.4,1);
-	transition: transform 0.5s cubic-bezier(0.6,0,0.4,1);
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
-}
-
-.drop-area.show {
-	-webkit-transform: translate3d(0,-100%,0);
-  transform: translate3d(0,-100%,0);
-}
-
-
-.nintendoswitch img{
-	min-width: 320px;
-	width: 100%;
-}
-
-.card-area {
-	width: 105px;
-	height: 130px;
-	border: dashed 4px rgb(199, 199, 199);
-	position: fixed;
-	left: 70%;
-	top: -35%;
-	display: none;
-}
-
-.drop-area.show div.card-area {
-	display:block;
-}
-
